@@ -1,7 +1,5 @@
 .main {
-  background-color: #fafafa;
   height: 100vh;
-  width: calc(100vw - 300px);
   &__feader{
     background-color: #fff;
     height: 100px;
@@ -40,11 +38,40 @@
       }
     }
   }
+  &__wrapper{
+    background-color: #fafafa;
+    height: calc(100vh - 190px);
+    width: calc(100vw - 300px);
+    padding: 35px 40px;
+  }
+  
   &__footer{
     background-color: #d2d2d2;
     height: 90px;
     position: fixed;
     bottom: 0;
     width: calc(100vw - 300px);
+  }
+}
+
+.tweets {
+  margin-bottom: 46px;
+  &__box{
+    display: flex;
+    margin-bottom: 12px;
+    &__name{
+      color: #333;
+      font-size: 16px;
+      font-weight: bolder;
+    }
+    &__date{
+      font-size: 12px;
+      color: #999;
+      margin-left: 10px;
+    }
+  }
+  &__text{
+    font-size: 14px;
+    color: #434A54;
   }
 }
