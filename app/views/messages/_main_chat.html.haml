@@ -19,3 +19,9 @@
       %p.tweets__text
         test
   .main__footer
+    .main__footer__text
+      %input
+      = link_to '#' do
+        = icon('fa','image', class: "main__footer__text__img")
+    .main__footer__submit
+      = link_to('Send',"#")
