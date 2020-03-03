@@ -5,7 +5,40 @@
   &__feader{
     background-color: #fff;
     height: 100px;
-    border-bottom: solid #eee;
+    padding: 0 40px 0;
+    border-bottom: solid 1px #eee;
+    display: flex;
+    justify-content: space-between;
+    &__left{
+      padding-top:35px;
+      &__name{
+        color: #333;
+        font-size: 20px;
+        margin-bottom: 15px;
+      }
+      &__member{
+        color: #999;
+        font-size: 12px;
+        display: flex;
+        ul,li {
+          list-style: none;
+        }
+      }
+    }  
+    &__right{
+      border: solid 1px #38aef0;
+      width: 72px;
+      height: 40px;
+      padding:0 20px 0;
+      font-size: 16px;
+      margin-top: 28px;
+      display: flex;
+      align-items: center;
+      a {
+        text-decoration: none;
+        color: #38aef0;
+      }
+    }
   }
   &__footer{
     background-color: #d2d2d2;
