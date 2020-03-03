@@ -1,0 +1,17 @@
+.main {
+  background-color: #fafafa;
+  height: 100vh;
+  width: calc(100vw - 300px);
+  &__feader{
+    background-color: #fff;
+    height: 100px;
+    border-bottom: solid #eee;
+  }
+  &__footer{
+    background-color: #d2d2d2;
+    height: 90px;
+    position: fixed;
+    bottom: 0;
+    width: calc(100vw - 300px);
+  }
+}

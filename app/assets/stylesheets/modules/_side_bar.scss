@@ -1,0 +1,41 @@
+
+.side {
+  background-color: #253141;
+  height: 100px;
+  width: 300px;
+  &__feader{
+    background-color: #253141;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__box{
+      height: 20px;
+      width: 260px;
+      display: flex;
+      justify-content: space-between;
+      line-height: 20px;
+      &__name{
+        font-size: 16px;
+        color: white;
+      }
+      &__icon{
+        display: inline-block;
+        width: 60px;
+        text-align: right;
+        &__new-group{
+          color: white;
+        }
+        &__edit{
+          color: white;
+          padding-left: 5px;
+        }
+      }
+    }
+  }
+  &__main{
+    height: calc(100Vh - 100px);
+    width: 300px;
+    background-color: #2f3e51;
+  }
+}
