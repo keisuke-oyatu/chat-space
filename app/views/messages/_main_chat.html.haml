@@ -8,7 +8,6 @@
         <li>test</li>
     .main__feader__right
       = link_to('Edit',"#")
-
   .main__wrapper
     .tweets
       .tweets__box
@@ -17,11 +16,12 @@
         %p.tweets__box__date
           2020/11/11 1111
       %p.tweets__text
-        test
+        test1
   .main__footer
     .main__footer__text
-      %input
-      = link_to '#' do
-        = icon('fa','image', class: "main__footer__text__img")
+      %input{:type => "text", :placeholder => "type a message"}/
+      %label
+        = icon('far','image',class: "main__footer__text__img")
+        %input{type: "file",class: "main__footer__text__file"}
     .main__footer__submit
       = link_to('Send',"#")

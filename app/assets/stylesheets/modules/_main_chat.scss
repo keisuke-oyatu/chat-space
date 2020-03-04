@@ -7,6 +7,8 @@
     border-bottom: solid 1px #eee;
     display: flex;
     justify-content: space-between;
+    position: fixed;
+    width: calc(100vw - 300px);
     &__left{
       padding-top:35px;
       &__name{
@@ -32,6 +34,7 @@
       margin-top: 28px;
       display: flex;
       align-items: center;
+      cursor: pointer;
       a {
         text-decoration: none;
         color: #38aef0;
@@ -40,9 +43,12 @@
   }
   &__wrapper{
     background-color: #fafafa;
-    height: calc(100vh - 190px);
     width: calc(100vw - 300px);
+    height: calc(100vh - 190px);
+    margin-top: 100px;
+    margin-bottom: 90px;
     padding: 35px 40px;
+    
   }
   
   &__footer{
@@ -59,18 +65,20 @@
       display: flex;
       align-items: center;
       width: 100%;
+      &__file{
+        display: none;
+      }
       input{
         height: 50px;
         width: 100%;
         padding-left: 10px;
       }
-      a {
+      &__img {
         position: absolute;
-        top:10px;
+        cursor: pointer;
+        top:14px;
         right:10px;
-        font-size: 1.3em;
-      }
-      &__message{
+        font-size: 1.5em;
       }
     }
     &__submit{
@@ -81,6 +89,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      cursor: pointer;
       a {
         text-decoration: none;
         color: white;
