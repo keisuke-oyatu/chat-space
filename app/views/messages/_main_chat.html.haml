@@ -6,7 +6,7 @@
       .main__feader__left__member
         <ul>Member :</ul>
         <li>test</li>
-    .main__feader__right
+    .main__feader__right.btn
       = link_to('Edit',"#")
   .main__wrapper
     .tweets
@@ -23,5 +23,5 @@
       %label
         = icon('far','image',class: "main__footer__text__img")
         %input{type: "file",class: "main__footer__text__file"}
-    .main__footer__submit
+    .main__footer__submit.btn
       = link_to('Send',"#")
