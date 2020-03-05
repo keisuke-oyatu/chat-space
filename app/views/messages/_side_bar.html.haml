@@ -2,12 +2,12 @@
   .side__feader
     .side__feader__box
       .side__feader__box__name
-        name
+        = current_user.name
       .side__feader__box__icon
         = link_to "#" do
           = icon('far', 'edit', class: "side__feader__box__icon__new-group")
           %span<>
-        = link_to "#" do
+        = link_to edit_user_path(current_user) do
           = icon('fa', 'cog', class: "side__feader__box__icon__edit")
           %span<>
   .side__main
