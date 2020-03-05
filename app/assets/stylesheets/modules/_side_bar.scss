@@ -1,0 +1,63 @@
+$sideFont-color: #fff;
+
+.side {
+  width: 300px;
+  height: 100vh;
+  &__feader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    background-color: #253141;
+    width: 300px;
+    height: 100px;
+    &__box{
+      display: flex;
+      justify-content: space-between;
+      width: 260px;
+      height: 20px;
+      &__name{
+        color: $sideFont-color;
+        font-size: 16px;
+        font-weight: bolder;
+      }
+      &__icon{
+        text-align: right;
+        width: 60px;
+        &__new-group{
+          color: $sideFont-color;
+          font-size: 0.9em;
+        }
+        &__edit{
+          color: $sideFont-color;
+          padding-left: 5px;
+          font-size: 0.9em;
+        }
+      }
+    }
+  }
+  &__main{
+    overflow-y: scroll;
+    width: 300px;
+    height: calc(100Vh - 100px);
+    margin-top: 100px;
+    padding: 20px;
+    background-color: #2f3e51;
+  }
+}
+
+.groups{
+  align-items: center;
+  width: 260px;
+  height: 31px;
+  margin-bottom:40px;
+  &__name{
+    margin-bottom: 5px;
+    color: $sideFont-color;
+    font-size: 15px;
+  }
+  &__message{
+    color: $sideFont-color;
+    font-size: 11px;
+  }
+}

@@ -1,0 +1,18 @@
+.side
+  .side__feader
+    .side__feader__box
+      .side__feader__box__name
+        name
+      .side__feader__box__icon
+        = link_to "#" do
+          = icon('far', 'edit', class: "side__feader__box__icon__new-group")
+          %span<>
+        = link_to "#" do
+          = icon('fa', 'cog', class: "side__feader__box__icon__edit")
+          %span<>
+  .side__main
+    .groups
+      .groups__name
+        tech
+      .groups__message
+        <p>tech2</p>

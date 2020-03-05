@@ -1,0 +1,27 @@
+.main
+  .main__feader
+    .main__feader__left
+      .main__feader__left__name
+        <p>test</p>
+      .main__feader__left__member
+        <ul>Member :</ul>
+        <li>test</li>
+    .main__feader__right.btn
+      = link_to('Edit',"#")
+  .main__wrapper
+    .tweets
+      .tweets__box
+        %p.tweets__box__name
+          name
+        %p.tweets__box__date
+          2020/11/11 1111
+      %p.tweets__text
+        test1
+  .main__footer
+    .main__footer__text
+      %input{:type => "text", :placeholder => "type a message"}/
+      %label
+        = icon('far','image',class: "main__footer__text__img")
+        %input{type: "file",class: "main__footer__text__file"}
+    .main__footer__submit.btn
+      = link_to('Send',"#")

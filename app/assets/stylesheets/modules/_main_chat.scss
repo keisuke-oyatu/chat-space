@@ -1,0 +1,115 @@
+$mainName-color: #333;
+
+.main {
+  height: 100vh;
+  &__feader{
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    background-color: #fff;
+    width: calc(100vw - 300px);
+    height: 100px;
+    padding: 0 40px 0;
+    border-bottom: solid 1px #eee;
+    &__left{
+      padding-top:35px;
+      &__name{
+        margin-bottom: 15px;
+        color: $mainName-color;
+        font-size: 20px;
+      }
+      &__member{
+        display: flex;
+        color: #999;
+        font-size: 12px;
+      }
+    }  
+    &__right{
+      width: 72px;
+      height: 40px;
+      margin-top: 28px;
+      border: solid 1px #38aef0;
+      font-size: 16px;
+      a {
+        color: #38aef0;
+      }
+    }
+  }
+  &__wrapper{
+    width: calc(100vw - 300px);
+    height: calc(100vh - 190px);
+    margin: 100px 0 90px 0;
+    background-color: #fafafa;
+    padding: 35px 40px;
+  }
+  
+  &__footer{
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: calc(100vw - 300px);
+    height: 90px;
+    padding: 0 40px 0 50px;
+    bottom: 0;
+    background-color: #d2d2d2;
+    &__text{
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      &__file{
+        display: none;
+      }
+      input{
+        width: 100%;
+        height: 50px;
+        padding-left: 10px;
+      }
+      &__img {
+        position: absolute;
+        top:14px;
+        right:10px;
+        font-size: 1.5em;
+        cursor: pointer;
+      }
+    }
+    &__submit{
+      margin-left: 15px;
+      width: 100px;
+      height: 50px;
+      background-color: #38aef0;
+      a {
+        color: white;
+      }
+    }
+  }
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.tweets {
+  margin-bottom: 46px;
+  &__box{
+    display: flex;
+    margin-bottom: 12px;
+    &__name{
+      color: $mainName-color;
+      font-size: 16px;
+      font-weight: bolder;
+    }
+    &__date{
+      margin-left: 10px;
+      color: #999;
+      font-size: 12px;
+    }
+  }
+  &__text{
+    color: #434A54;
+    font-size: 14px;
+  }
+}
