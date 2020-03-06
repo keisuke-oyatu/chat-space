@@ -4,15 +4,17 @@
       .side__feader__box__name
         = current_user.name
       .side__feader__box__icon
-        = link_to "#" do
+        = link_to new_group_path do
           = icon('far', 'edit', class: "side__feader__box__icon__new-group")
           %span<>
         = link_to edit_user_path(current_user) do
           = icon('fa', 'cog', class: "side__feader__box__icon__edit")
           %span<>
   .side__main
-    .groups
-      .groups__name
-        tech
-      .groups__message
-        <p>tech2</p>
+    - current_user.groups.each do |group|
+      .groups
+        = link_to edit_group_path(group) do
+          .groups__name
+            = group.name
+          .groups__message
+            message
