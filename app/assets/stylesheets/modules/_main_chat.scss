@@ -41,6 +41,7 @@ $mainName-color: #333;
     margin: 100px 0 90px 0;
     background-color: #fafafa;
     padding: 35px 40px;
+    overflow: scroll;
   }
   
   &__footer{
@@ -60,17 +61,17 @@ $mainName-color: #333;
       &__file{
         display: none;
       }
-      input{
+      &__input{
         width: 100%;
         height: 50px;
         padding-left: 10px;
-      }
-      &__img {
-        position: absolute;
-        top:14px;
-        right:10px;
-        font-size: 1.5em;
-        cursor: pointer;
+        &__img {
+          position: absolute;
+          top:7px;
+          right:120px;
+          font-size: 1.5em;
+          cursor: pointer;
+        }
       }
     }
     &__submit{
@@ -78,9 +79,7 @@ $mainName-color: #333;
       width: 100px;
       height: 50px;
       background-color: #38aef0;
-      a {
-        color: white;
-      }
+      color: white;
     }
   }
 }
@@ -92,11 +91,11 @@ $mainName-color: #333;
   cursor: pointer;
 }
 
-.tweets {
+.message {
   margin-bottom: 46px;
   &__box{
-    display: flex;
-    margin-bottom: 12px;
+  display: flex;
+  margin-bottom: 12px;
     &__name{
       color: $mainName-color;
       font-size: 16px;
@@ -106,10 +105,14 @@ $mainName-color: #333;
       margin-left: 10px;
       color: #999;
       font-size: 12px;
-    }
+    } 
   }
   &__text{
     color: #434A54;
     font-size: 14px;
   }
+.lower-message__image{
+  width: 200px;
+  height: 148px;
+}
 }
