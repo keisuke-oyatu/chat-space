@@ -12,10 +12,8 @@ $(function(){
                     </div>
                     <p class="message__text">
                       ${message.text}
-                      <div>
-                        <img src=${message.image} class="lower-message__image">
-                      </div>
                     </p>
+                    <img src=${message.image} class="lower-message__image">
                   </div>`
                 return html;
     } else {
