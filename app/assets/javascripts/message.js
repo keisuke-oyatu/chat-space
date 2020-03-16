@@ -12,7 +12,9 @@ $(function(){
                     </div>
                     <p class="message__text">
                       ${message.text}
-                      <img src=${message.image} class="lower-message__image">
+                      <div>
+                        <img src=${message.image} class="lower-message__image">
+                      </div>
                     </p>
                   </div>`
                 return html;
