@@ -1,7 +1,7 @@
 $(function(){
   function buildHTML(message){
     if (message.image) {
-      var html = `<div class="message">
+      var html = `<div class="message" data-message-id="${message.id}">
                     <div class="message__box">
                       <p class="message__box__name">
                         ${message.user_name}
@@ -12,12 +12,12 @@ $(function(){
                     </div>
                     <p class="message__text">
                       ${message.text}
-                      <img src=${message.image} class="lower-message__image">
                     </p>
+                    <img src=${message.image} class="lower-message__image">
                   </div>`
                 return html;
     } else {
-      var html = `<div class="message">
+      var html = `<div class="message" data-message-id="${message.id}">
                     <div class="message__box">
                       <p class="message__box__name">
                         ${message.user_name}
@@ -33,7 +33,30 @@ $(function(){
                 return html;
     };
   }
-
+  
+  var reloadMessages = function() {
+    var last_message_id = $('.message:last').data("message-id");
+    $.ajax({
+      url: "api/messages",
+      type: 'get',
+      dataType: 'json',
+      data: {id: last_message_id}
+    })
+    .done(function(messages) {
+      if (messages.length !== 0){
+        var insertHTML = '';
+        $.each(messages, function(i, message) {
+          insertHTML += buildHTML(message)
+        });
+        $('.main__wrapper').append(insertHTML);
+        $('.main__wrapper').animate({ scrollTop: $('.main__wrapper')[0].scrollHeight});
+      }
+    })
+    .fail(function() {
+      alert('error');
+    });
+  };
+  
   $(".main__footer__text").on("submit",function(e){
     e.preventDefault()
     var formData = new FormData(this);
@@ -57,4 +80,7 @@ $(function(){
       alert("メッセージ送信に失敗しました");
     })
   })
+  if (document.location.href.match(/\/groups\/\d+\/messages/)) {
+    setInterval(reloadMessages, 7000);
+  }
 });
